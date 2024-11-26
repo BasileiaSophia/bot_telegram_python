@@ -5,14 +5,14 @@ sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 import telebot
 #from flask import Flask, request
 from config import TOKEN # AÑADIR WEBHOOK_URL
-from app.handlers import inicio # facturación, registro
+from app.handlers import inicio, registro_cliente#facturación, 
 
 bot = telebot.TeleBot(TOKEN)
 #app = Flask(__name__)
 
 inicio.setup(bot)
-#facturar.setup(bot)
-#registrar.setup(bot)    
+# facturación.setup(bot)
+registro_cliente.setup(bot)    
 
 #@app.route('/' + TOKEN, methods=['POST'])
 #def getMessage():
